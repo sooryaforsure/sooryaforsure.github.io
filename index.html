@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sooryathej K L - Software Developer | Portfolio</title>
+
+    <!-- Tailwind & DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-br from-base-100 via-base-200 to-base-300 min-h-screen text-base-content">
+    <div class="w-full min-h-screen">
+    <!-- Absolute positioned container to guarantee it stays at the very top of the document flow -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999; pointer-events: none;" class="w-full">
+        <!-- Desktop Nav -->
+        <div class="hidden sm:block w-full px-4 pt-4" style="pointer-events: auto;">
+            <nav class="glass rounded-full max-w-4xl mx-auto px-4 py-2 shadow-2xl ring-1 ring-base-300 flex justify-between items-center bg-base-100/50 backdrop-blur-lg">
+                <div class="flex gap-2 w-1/3 justify-start">
+                    <div class="group relative flex justify-center items-center">
+                        <a href="#home" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg>
+                        </a>
+                        <div class="absolute top-[120%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
+                            <div class="bg-neutral text-primary px-4 py-1.5 rounded-2xl -rotate-6 font-black text-2xl shadow-xl flex items-center justify-center relative">
+                                Portfolio
+                                <div class="absolute -top-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-b-neutral"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative flex justify-center items-center">
+                        <a href="about.html" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg>
+                        </a>
+                        <div class="absolute top-[120%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
+                            <div class="bg-neutral text-primary px-4 py-1.5 rounded-2xl -rotate-6 font-black text-2xl shadow-xl flex items-center justify-center relative animate-bounce">
+                                About
+                                <div class="absolute -top-2 left-1/2 -translate-x-1/2 border-4 border-transparent border-b-neutral"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/3 flex justify-center">
+                    <a href="#home" class="btn btn-ghost text-primary text-2xl font-black">soorya</a>
+                </div>
+
+                <div class="w-1/3 flex justify-end gap-2">
+                    <div class="group relative flex justify-center items-center">
+                        <button onclick="document.getElementById('settingsDialog').showModal()" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transition-all transform"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"></path></svg>
+                        </button>
+                        <div class="absolute top-[120%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 right-0">
+                            <div class="bg-neutral text-primary px-4 py-1.5 rounded-2xl -rotate-6 font-black text-2xl shadow-xl flex items-center justify-center relative animate-bounce">
+                                Settings
+                                <div class="absolute -top-2 right-4 border-4 border-transparent border-b-neutral"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Dock (Fixed to Bottom) -->
+    <div style="position: fixed; bottom: 1.5rem; left: 0; right: 0; z-index: 9999; pointer-events: none;" class="w-full sm:hidden flex justify-center">
+        <div style="pointer-events: auto;" class="glass rounded-full px-6 py-3 shadow-2xl flex gap-6 bg-base-100/50 backdrop-blur-lg border border-base-300">
+            <a href="#home" class="dock-active link link-hover">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[1.7em]"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path></svg>
+            </a>
+            <a href="about.html" class="link link-hover">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[1.7em]"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg>
+            </a>
+
+            <button onclick="document.getElementById('settingsDialog').showModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[1.7em] transition-all transform rotate-90"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <dialog id="settingsDialog" class="modal">
+                <div class="modal-box h-fit">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend text-xl mb-4 font-bold">Themes</legend>
+                        <select id="theme-select" class="select select-bordered w-full">
+                            <option value="dracula">Dracula (Sleek Dark)</option>
+                            <option value="night">Night (Deep Blue Dark)</option>
+                            <option value="dark">Standard Dark</option>
+                            <option value="winter">Winter (Clean Light)</option>
+                            <option value="corporate">Corporate (Professional Light)</option>
+                        </select>
+                    </fieldset>
+                    <div class="modal-action">
+                        <form method="dialog"><button class="btn">Close</button></form>
+                    </div>
+                </div>
+            </dialog>
+        </header>
+
+        <main class="max-w-6xl min-h-dvh mx-auto px-5 sm:px-10 pt-24 sm:pt-32 pb-10 leading-relaxed bg-transparent">
+
+            <!-- Hero Section -->
+            <div id="home" class="hero bg-transparent h-[80vh] min-h-135 relative overflow-hidden flex justify-center items-center">
+                <!-- Cursor-following light orb -->
+                <div id="hero-glow" class="absolute w-[60vw] h-[60vw] sm:w-96 sm:h-96 bg-primary/40 rounded-full blur-[80px] pointer-events-none z-0 transition-transform duration-200 ease-out"></div>
+
+                <div class="hero-content text-center relative z-10 flex-col w-full overflow-hidden">
+                    <div class="w-full">
+                        <h1 class="text-[9vw] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black leading-tight tracking-tight">
+                            Writing software <br> staying curious
+                        </h1>
+                        <p class="py-6 leading-relaxed text-base-content/70 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto font-medium">
+                            I'm Sooryathej K L, an MCA student based in Thrissur.<br class="hidden sm:block">
+                            I love building amazing things and sharing my knowledge with others.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-5 pt-5">
+
+                <!-- Tech Stack Interactive Section -->
+                <div class="rounded-t-box bg-transparent p-5 sm:p-10">
+                    <section id="techStack" class="flex flex-col gap-0 w-full max-w-4xl mx-auto">
+                        <div class="flex justify-between flex-row mb-6">
+                            <div>
+                                <h1 class="mb-2 text-4xl font-bold">Tech Stack</h1>
+                                <p class="text-base-content/70 font-medium">Do our skills match? Swipe right if yes, left if no!</p>
+                            </div>
+                            <div class="flex flex-row gap-2 items-center">
+                                <button id="showAllTechBtn" class="btn btn-circle btn-ghost" title="View All">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                                    </svg>
+                                </button>
+                                <button id="restartTechTopBtn" class="btn btn-circle btn-ghost" title="Restart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Swipe Container -->
+                        <div class="h-[65vh] md:h-[75vh] min-h-[500px] my-2 relative w-full rounded-box flex justify-center items-center overflow-hidden bg-base-100/30 border border-base-300 shadow-inner transition-all" id="techContainerWrapper">
+
+                            <!-- Background glow for left/right -->
+                            <div class="absolute flex flex-row w-full h-full justify-center pointer-events-none z-0">
+                                <div class="w-1/2 h-full flex justify-center items-center blur-3xl opacity-0 transition-opacity duration-300" id="glowLeft">
+                                    <div class="w-full h-full bg-error/20"></div>
+                                </div>
+                                <div class="w-1/2 h-full flex justify-center items-center blur-3xl opacity-0 transition-opacity duration-300" id="glowRight">
+                                    <div class="w-full h-full bg-success/20"></div>
+                                </div>
+                            </div>
+
+                            <!-- End State Card -->
+                            <div id="endState" class="flex flex-col justify-center items-center p-6 h-[280px] w-[240px] z-30 absolute bg-base-100 text-base-content rounded-2xl gap-4 transition-all duration-500 scale-90 opacity-0 pointer-events-none shadow-2xl border border-base-300">
+                                <p id="matchPercentage" class="text-5xl font-extrabold text-primary">0%</p>
+                                <p class="text-xl font-bold text-center">Match!</p>
+                                <div class="flex gap-2 w-1/3 justify-start">
+                                    <button id="restartTechBtn" class="btn btn-primary btn-sm mt-2">Restart</button>
+                                    <a href="#resume" class="btn btn-secondary btn-sm mt-2">Contact Me</a>
+                                </div>
+                            </div>
+
+                            <!-- Cards will be injected here via JS -->
+                            <div id="cardContainer" class="absolute inset-0 flex justify-center items-center z-20 transition-all duration-500" style="perspective: 1000px;">
+                            </div>
+                        </div>
+                        <div class="flex justify-center pt-4 text-base-content/50 font-bold tracking-wider text-sm uppercase" id="swipeText"><b>&larr; Swipe left or right &rarr;</b></div>
+                    </section>
+                </div>
+
+                <!-- Experience / Education -->
+                <div id="academic" class="relative rounded-b-box bg-transparent pt-5 px-2 pb-10 lg:p-10 overflow-hidden mt-5">
+                    <section class="w-full max-w-4xl mx-auto">
+                        <h1 class="text-center text-4xl font-bold mb-10">Academic Experience</h1>
+                        <ul class="timeline timeline-vertical timeline-compact w-full">
+
+                            <!-- MCA -->
+                            <li>
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <div class="w-full relative timeline-box border-transparent shadow-none bg-transparent timeline-end my-4">
+                                    <!-- Decorative blur background -->
+                                    <div class="absolute inset-0 overflow-hidden rounded-xl -z-10">
+                                        <svg class="absolute z-20 left-10 pointer-events-none fill-secondary/30 blur-3xl w-40 h-40" viewBox="0 0 100 80"><circle cx="50" cy="40" r="40"/></svg>
+                                    </div>
+                                    <div class="card relative z-30 glass shadow-xl border-0 transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-2xl w-full">
+                                        <div class="card-body p-6">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <div class="badge badge-md badge-secondary font-semibold">Academic</div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row justify-between items-left md:items-center md:gap-2 mb-4">
+                                                <h2 class="card-title text-2xl">Expected 2028</h2>
+                                                <h2 class="card-title text-2xl text-primary">Master of Computer Applications</h2>
+                                            </div>
+                                            <p class="text-lg">Government Engineering College, Thrissur (KTU)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="bg-primary">
+                            </li>
+
+                            <!-- BSc -->
+                            <li>
+                                <hr class="bg-primary">
+                                <div class="timeline-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <div class="w-full relative timeline-box border-transparent shadow-none bg-transparent timeline-end my-4">
+                                    <!-- Decorative blur background -->
+                                    <div class="absolute inset-0 overflow-hidden rounded-xl -z-10">
+                                        <svg class="absolute z-20 right-10 pointer-events-none fill-accent/30 blur-3xl w-40 h-40" viewBox="0 0 100 80"><circle cx="50" cy="40" r="40"/></svg>
+                                    </div>
+                                    <div class="card relative z-30 glass shadow-xl border-0 transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-2xl w-full">
+                                        <div class="card-body p-6">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <div class="badge badge-md badge-secondary font-semibold">Academic</div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row justify-between items-left md:items-center md:gap-2 mb-4">
+                                                <h2 class="card-title text-2xl">Graduated</h2>
+                                                <h2 class="card-title text-2xl text-primary">B.Sc. in Computer Science</h2>
+                                            </div>
+                                            <p class="text-lg">St. Thomas College (Autonomous), Thrissur</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="divider m-0"></div>
+
+                <!-- Resume & Contact -->
+                <section id="resume">
+                    <div class="hero min-h-fit py-10 px-0 sm:px-10">
+                        <div class="hero-content flex-col justify-between md:flex-row-reverse w-full text-center md:text-left gap-10">
+                            <!-- Photo -->
+                            <div class="avatar">
+                                <div class="mask mask-squircle w-48 sm:w-64 md:w-80 shadow-2xl transition-transform hover:scale-105">
+                                    <img src="profile.jpg" alt="A portrait of Sooryathej K L" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="max-w-xl">
+                                <h1 class="text-5xl font-bold">View my Resume</h1>
+                                <p class="py-6 text-xl text-base-content/85">
+                                    Currently seeking for job... I'm actively looking for a role as a software developer. Feel free to download my resume for reference.
+                                </p>
+                                <a class="btn btn-primary" href="./Sooryathej_Resume_v2.pdf" download="Sooryathej_Resume_v2.pdf">Download resume</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="relative overflow-hidden w-full bg-transparent" data-pagefind-ignore>
+            <svg class="absolute bottom-0 left-0 z-20 pointer-events-none w-full fill-accent/30 blur-3xl invisible sm:visible" viewBox="0 0 1600 600"><ellipse cx="800" cy="600" rx="800" ry="60"></ellipse></svg>
+            <svg class="absolute bottom-0 left-0 z-20 pointer-events-none w-full fill-accent/30 blur-3xl visible sm:invisible" viewBox="0 0 1600 600"><ellipse cx="800" cy="600" rx="800" ry="200"></ellipse></svg>
+
+            <footer class="relative z-30 footer footer-center text-base-content rounded p-10 pb-25 sm:pb-10 bg-transparent">
+                <nav class="relative top-5">
+                    <div class="grid grid-flow-col gap-5">
+                        <!-- GitHub -->
+                        <a href="https://github.com/sooryaforsure" target="_blank" class="link link-hover transition-colors hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:sooryathej2005@gmail.com" class="link link-hover transition-colors hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="fill-current" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"></path></svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/sooryathej-k-l-07187a282/" target="_blank" class="link link-hover transition-colors hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="fill-current" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg>
+                        </a>
+                    </div>
+                </nav>
+                <aside class="flex flex-col sm:flex-row gap-2 items-center text-sm mt-4">
+                    <div class="flex gap-2 items-center">
+                        <a href="legal.html" class="link link-hover">Legal notice</a>
+                        <p>&bull;</p>
+                        <a href="privacy.html" class="link link-hover">Privacy</a>
+                    </div>
+                    <p class="hidden sm:block">&bull;</p>
+                    <p>Sooryathej K L &copy; 2026 - All rights reserved</p>
+                </aside>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
